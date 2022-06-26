@@ -1,0 +1,21 @@
+INT 10H - AH=02H - set keyboard cursor position
+INT 33H - AX=07H, CX=x1, DX=x2 - set horizontal limit to cursor
+INT 33H - AX=08H, CX=x1, DX=x2 - set vertical limit to cursor
+INT 21H - AH=04CH - return DOS control
+INT 21H - AH=02H, DL=char - print a character to screen
+INT 21H - AH=03DH, AL=02H, DX=filename - open a file
+INT 21H - AH=042H, AL=02H, CX=0H, DX=0H - move file cursor
+INT 21H - AH=040H, CX=strLen, DX=str - write string to file
+INT 10H - AX=0EH - make a video screen
+INT 10H - AH=06H, AL=0H, BH=0DH, CX=0, DH=01E, DL=064H - clear video screen
+INT 21H - AH=0CH, AL=0H - flush buffer
+INT 16H - AH=01H - check for keystroke input
+INT 33H - AX=03H - get mouse position
+INT 33H - AX=0H - hide mouse
+INT 33H - AX=04H - set mouse cursor position
+INT 33H - AX=01H - make mouse visible
+INT 33H - AX=05H, BX=0H - get mouse click stats
+INT 15H - AH=086H, DX:CX=delayTime - cause the required amount of sleep
+INT 10H - AH=0CH, CX=x, DX=y - write graphics pixel
+INT 1AH - AH=00H - get system clock ticks
+INT 21H - AH=01H - get keyboard character input
